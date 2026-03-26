@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: #1A2E44;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sunset text-white font-heading font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300;
+    @apply hover:bg-sunset-light hover:scale-105 hover:shadow-xl;
+    @apply active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-ocean-dark font-heading font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 border-2 border-ocean;
+    @apply hover:bg-ocean hover:text-white hover:scale-105 hover:shadow-xl;
+    @apply active:scale-95;
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-20;
+  }
+
+  .section-title {
+    @apply font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl text-navy mb-6;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-ocean to-sunset;
+  }
+
+  .wave-border {
+    background: linear-gradient(135deg, #0077BE 0%, #FF6B35 100%);
+  }
+}
