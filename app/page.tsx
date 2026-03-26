@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const PHONE = "+43 664 123 4567";
 const PHONE_LINK = "tel:+436641234567";
@@ -557,6 +558,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <WhatsAppButton phone="+43 664 789 0123" />
     </div>
   );
 }
